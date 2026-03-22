@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Colors (Light Mode) */
+  --color-background: #F8FAFC;
+  --color-foreground: #FFFFFF;
+  
+  --color-primary: #4F46E5;
+  --color-secondary: #7C3AED;
+  
+  --color-text-main: #0F172A;
+  --color-text-muted: #64748B;
+  
+  --color-accent: #10B981;
+  --color-border: #E2E8F0;
+
+  /* Typography */
+  --font-heading: var(--font-heading), "Space Grotesk", system-ui, sans-serif;
+  --font-body: var(--font-jakarta), "Plus Jakarta Sans", system-ui, sans-serif;
+  
+  /* Radius & Border */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows & Effects */
+  --shadow-soft: 0 4px 20px -2px rgba(79, 70, 229, 0.1);
+  --shadow-soft-hover: 0 10px 25px -5px rgba(79, 70, 229, 0.15), 0 8px 10px -6px rgba(79, 70, 229, 0.1);
+  --shadow-button: 0 4px 14px 0 rgba(79, 70, 229, 0.3);
+  --shadow-glow: 0 0 20px rgba(79, 70, 229, 0.5);
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Typography Overrides */
+h1 { line-height: 1.1; }
+p { line-height: 1.6; }
+
+/* Utilities */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+}
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.gradient-bg-subtle {
+  background: linear-gradient(135deg, #e0e7ff, #ede9fe);
+}
+
+/* Transitions */
+.transition-card {
+  transition: all 200ms ease-out;
+}
+.transition-long {
+  transition: all 500ms ease-out;
+}
+
+/* Animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 4000ms ease-in-out infinite;
+}
+
+/* Atmospheric Blobs Config */
+.blob-primary {
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.3) 0%, rgba(79, 70, 229, 0) 70%);
+}
+.blob-secondary {
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.3) 0%, rgba(124, 58, 237, 0) 70%);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .transition-card, .transition-long {
+    transition: none;
+  }
+  .animate-pulse-slow {
+    animation: none;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
