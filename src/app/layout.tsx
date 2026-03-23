@@ -16,9 +16,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Creative Developer",
+  title: "Amine | Creative Developer",
   description:
-    "Creative portfolio showcasing modern, enterprise-ready web development projects",
+    "Amine is a creative developer specializing in crafting unique digital experiences. With a passion for blending design and technology, Amine creates innovative solutions that captivate audiences and drive engagement. Explore Amine's portfolio to see how creativity meets functionality in the world of web development.",
 };
 
 export default function RootLayout({
@@ -28,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="ltr">
-      <body className={`${jakarta.variable} ${spaceGrotesk.variable} antialiased font-sans bg-slate-50 text-slate-900 overflow-x-hidden`}>
+      <body
+        className={`${jakarta.variable} ${spaceGrotesk.variable} antialiased font-sans bg-slate-50 text-slate-900 overflow-x-hidden`}
+      >
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

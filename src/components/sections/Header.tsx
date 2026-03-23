@@ -4,23 +4,26 @@ import { useState } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { useLanguage } from "@/context/LanguageContext";
-
+import logo from "@/assets/amine.png";
+import Image from "next/image";
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { t, toggleLanguage } = useLanguage();
 
   return (
-    <header style={{direction:"ltr"}} className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 shadow-sm">
+    <header
+      style={{ direction: "ltr" }}
+      className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 shadow-sm"
+    >
       <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <a
-          href="#"
-          className="font-heading text-xl font-bold flex items-center gap-2 text-slate-900"
-        >
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 shadow-sm border border-indigo-500">
-            <span className="text-white text-sm font-bold">SI</span>
-          </span>
-         Amine
+        <a href="#" className="font-heading text-xl font-bold  text-slate-900">
+          <Image
+            src={logo}
+            alt="Amine Logo"
+            width={100}
+            className="rounded-full"
+          />
         </a>
 
         {/* Desktop Nav */}
@@ -48,7 +51,12 @@ export default function Header() {
             <Globe size={16} strokeWidth={2} />
             {t.header.switchLang}
           </button>
-          <Button href="#contact" variant="primary" showArrow className="px-5 py-2">
+          <Button
+            href="#contact"
+            variant="primary"
+            showArrow
+            className="px-5 py-2"
+          >
             {t.header.cta}
           </Button>
         </div>
