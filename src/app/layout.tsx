@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import { LanguageProvider } from "@/context/LanguageContext";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -27,11 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en" dir="ltr" suppressHydrationWarning>
       <body
         className={`${jakarta.variable} ${spaceGrotesk.variable} antialiased font-sans bg-slate-50 text-slate-900 overflow-x-hidden`}
       >
-        <LanguageProvider>{children}</LanguageProvider>
+        {children}
       </body>
     </html>
   );

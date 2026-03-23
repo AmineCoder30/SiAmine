@@ -6,9 +6,13 @@ import Button from "@/components/ui/Button";
 import { useLanguage } from "@/context/LanguageContext";
 import logo from "@/assets/amine.png";
 import Image from "next/image";
+import Link from "next/link";
+
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { t, toggleLanguage } = useLanguage();
+  const { t, lang } = useLanguage();
+
+  const otherLang = lang === "ar" ? "en" : "ar";
 
   return (
     <header
@@ -44,13 +48,13 @@ export default function Header() {
 
         {/* CTA + Language Toggle */}
         <div className="hidden md:flex items-center gap-4">
-          <button
-            onClick={toggleLanguage}
+          <Link
+            href={`/${otherLang}`}
             className="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-50 hover:text-indigo-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
           >
             <Globe size={16} strokeWidth={2} />
             {t.header.switchLang}
-          </button>
+          </Link>
           <Button
             href="#contact"
             variant="primary"
@@ -94,13 +98,13 @@ export default function Header() {
               </a>
             ))}
             <div className="h-px w-full bg-slate-100 my-2" />
-            <button
-              onClick={toggleLanguage}
+            <Link
+              href={`/${otherLang}`}
               className="flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 w-full mb-2"
             >
               <Globe size={16} strokeWidth={2} />
               {t.header.switchLang}
-            </button>
+            </Link>
             <Button
               href="#contact"
               onClick={() => setMobileOpen(false)}
