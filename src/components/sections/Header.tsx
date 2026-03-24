@@ -22,12 +22,7 @@ export default function Header() {
       <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-1">
         {/* Logo */}
         <a href="#" className="font-heading text-xl font-bold  text-slate-900">
-          <Image
-            src={logo}
-            alt="Amine Logo"
-            width={100}
-            className="rounded-full"
-          />
+          <Image src={logo} alt="Amine Logo" width={100} />
         </a>
 
         {/* Desktop Nav */}

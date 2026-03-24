@@ -3,6 +3,8 @@
 import { Heart, ArrowUp } from "lucide-react";
 import ShapeDecoration from "@/components/ui/ShapeDecoration";
 import { useLanguage } from "@/context/LanguageContext";
+import logo from "@/assets/amine.png";
+import Image from "next/image";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -20,12 +22,9 @@ export default function Footer() {
           <div>
             <a
               href="#"
-              className="font-heading text-2xl font-bold flex items-center gap-2 mb-6"
+              className="font-heading text-xl font-bold  text-slate-900"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600 border border-white/10 shadow-lg shadow-indigo-500/20">
-                <span className="text-white text-base font-bold">P</span>
-              </span>
-              {t.footer.brand}
+              <Image src={logo} alt="Amine Logo" width={100} />
             </a>
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
               {t.footer.brandDescription}
