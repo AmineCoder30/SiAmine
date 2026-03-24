@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
@@ -13,12 +12,6 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
-
-export const metadata: Metadata = {
-  title: "Amine | Creative Developer",
-  description:
-    "Amine is a creative developer specializing in crafting unique digital experiences. With a passion for blending design and technology, Amine creates innovative solutions that captivate audiences and drive engagement. Explore Amine's portfolio to see how creativity meets functionality in the world of web development.",
-};
 
 export default function RootLayout({
   children,

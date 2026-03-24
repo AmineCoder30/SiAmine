@@ -19,7 +19,7 @@ export default function Header() {
       style={{ direction: "ltr" }}
       className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 shadow-sm"
     >
-      <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
+      <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-1">
         {/* Logo */}
         <a href="#" className="font-heading text-xl font-bold  text-slate-900">
           <Image
@@ -32,6 +32,7 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav
+          style={{ direction: lang === "ar" ? "rtl" : "ltr" }}
           className="hidden md:flex items-center gap-8"
           aria-label="Main navigation"
         >
@@ -85,6 +86,7 @@ export default function Header() {
         <nav
           className="md:hidden border-t border-slate-100 bg-white px-6 py-6 shadow-lg absolute w-full"
           aria-label="Mobile navigation"
+          style={{ direction: lang === "ar" ? "rtl" : "ltr" }}
         >
           <div className="flex flex-col gap-4">
             {t.header.nav.map((link) => (

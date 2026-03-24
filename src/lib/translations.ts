@@ -6,6 +6,7 @@ const ar = {
     nav: [
       { label: "من أنا", href: "#about" },
       { label: "خدماتي", href: "#services" },
+      { label: "الأسعار", href: "#pricing" },
       { label: "مشاريعي", href: "#projects" },
       { label: "آراء العملاء", href: "#testimonials" },
       { label: "الأسئلة المتكررة", href: "#faq" },
@@ -75,8 +76,7 @@ const ar = {
       },
       {
         title: "تطبيقات الجوال",
-        description:
-          "تطبيقات متعددة المنصات تعمل بسلاسة وتشعر وكأنها أصلية.",
+        description: "تطبيقات متعددة المنصات تعمل بسلاسة وتشعر وكأنها أصلية.",
       },
       {
         title: "تحسين السيو والأداء",
@@ -93,6 +93,106 @@ const ar = {
           "مكتبات مكونات قابلة للتوسع تضمن اتساق علامتك التجارية في كل مكان.",
       },
     ],
+  },
+  pricing: {
+    label: "الأسعار",
+    title: "خطط تطوير المواقع وتطبيقات الجوال",
+    highlightWord: "المواقع",
+    description: "اختر نوع الخدمة ثم الخطة المناسبة لميزانيتك ومرحلة مشروعك.",
+    switcher: {
+      website: "تطوير مواقع",
+      mobile: "تطوير جوال",
+    },
+    plans: {
+      website: [
+        {
+          name: "Starter Site",
+          price: "$399",
+          period: "/مشروع",
+          description: "موقع تعريفي سريع للشركات الصغيرة أو الأفراد.",
+          features: [
+            "حتى 5 صفحات",
+            "تصميم متجاوب",
+            "تحسين SEO أساسي",
+            "نموذج تواصل",
+          ],
+          cta: "ابدأ الآن",
+        },
+        {
+          name: "Business Pro",
+          price: "$899",
+          period: "/مشروع",
+          description: "موقع أعمال متكامل مع تجربة استخدام احترافية.",
+          features: [
+            "حتى 12 صفحة",
+            "لوحة إدارة محتوى",
+            "تحسين سرعة وأداء متقدم",
+            "ربط Google Analytics",
+            "دعم فني لمدة شهر",
+          ],
+          badge: "الأكثر طلباً",
+          cta: "احجز هذه الخطة",
+        },
+        {
+          name: "Scale Custom",
+          price: "$1490",
+          period: "/مشروع",
+          description: "حل مخصص للشركات التي تحتاج تدفقات عمل متقدمة.",
+          features: [
+            "ميزات مخصصة بالكامل",
+            "تكامل API",
+            "صلاحيات متعددة للمستخدمين",
+            "أتمتة عمليات",
+            "دعم وإطلاق متقدم",
+          ],
+          cta: "تواصل للمناقشة",
+        },
+      ],
+      mobile: [
+        {
+          name: "MVP Mobile",
+          price: "$1290",
+          period: "/مشروع",
+          description: "تطبيق MVP سريع للتحقق من فكرتك في السوق.",
+          features: [
+            "شاشات أساسية",
+            "تسجيل دخول وحسابات",
+            "واجهة React Native",
+            "نشر تجريبي",
+          ],
+          cta: "ابدأ تطبيقك",
+        },
+        {
+          name: "Launch Ready",
+          price: "$2390",
+          period: "/مشروع",
+          description: "تطبيق متكامل وجاهز للإطلاق على متاجر التطبيقات.",
+          features: [
+            "واجهة وتجربة احترافية",
+            "تكامل API كامل",
+            "إشعارات Push",
+            "تحليلات داخل التطبيق",
+            "تجهيز App Store و Play Store",
+          ],
+          badge: "أفضل قيمة",
+          cta: "احجز الإطلاق",
+        },
+        {
+          name: "Enterprise App",
+          price: "$3990",
+          period: "/مشروع",
+          description: "تطبيقات كبيرة بميزات متقدمة وتدفقات متعددة.",
+          features: [
+            "معمارية قابلة للتوسع",
+            "دعم تعدد الأدوار",
+            "أمان متقدم",
+            "لوحة إدارة وتكاملات",
+            "خطة صيانة بعد الإطلاق",
+          ],
+          cta: "طلب عرض مخصص",
+        },
+      ],
+    },
   },
   projects: {
     label: "مشاريعي",
@@ -235,6 +335,7 @@ const en: typeof ar = {
     nav: [
       { label: "About", href: "#about" },
       { label: "Services", href: "#services" },
+      { label: "Pricing", href: "#pricing" },
       { label: "Projects", href: "#projects" },
       { label: "Testimonials", href: "#testimonials" },
       { label: "FAQ", href: "#faq" },
@@ -324,11 +425,115 @@ const en: typeof ar = {
       },
     ],
   },
+  pricing: {
+    label: "Pricing",
+    title: "Pricing Plans for Website & Mobile Development",
+    highlightWord: "Website",
+    description:
+      "Switch between service types and choose the plan that matches your goals and budget.",
+    switcher: {
+      website: "Website Development",
+      mobile: "Mobile Development",
+    },
+    plans: {
+      website: [
+        {
+          name: "Starter Site",
+          price: "$399",
+          period: "/project",
+          description:
+            "A clean and fast marketing website for small businesses.",
+          features: [
+            "Up to 5 pages",
+            "Responsive layout",
+            "Basic SEO setup",
+            "Contact form integration",
+          ],
+          cta: "Get Started",
+        },
+        {
+          name: "Business Pro",
+          price: "$899",
+          period: "/project",
+          description:
+            "A full business website with stronger UX and performance.",
+          features: [
+            "Up to 12 pages",
+            "Content management setup",
+            "Advanced speed optimization",
+            "Google Analytics integration",
+            "1 month support",
+          ],
+          badge: "Most Popular",
+          cta: "Choose Plan",
+        },
+        {
+          name: "Scale Custom",
+          price: "$1490",
+          period: "/project",
+          description: "Custom web product for complex business workflows.",
+          features: [
+            "Custom feature development",
+            "API integrations",
+            "Multi-user roles",
+            "Workflow automation",
+            "Launch support",
+          ],
+          cta: "Book Consultation",
+        },
+      ],
+      mobile: [
+        {
+          name: "MVP Mobile",
+          price: "$1290",
+          period: "/project",
+          description: "A focused MVP app to validate your idea quickly.",
+          features: [
+            "Core app screens",
+            "Auth and user accounts",
+            "React Native UI",
+            "Test build delivery",
+          ],
+          cta: "Start Your App",
+        },
+        {
+          name: "Launch Ready",
+          price: "$2390",
+          period: "/project",
+          description: "A production-ready app prepared for public release.",
+          features: [
+            "Polished UI/UX",
+            "Full API integration",
+            "Push notifications",
+            "In-app analytics",
+            "App Store and Play Store setup",
+          ],
+          badge: "Best Value",
+          cta: "Launch With Me",
+        },
+        {
+          name: "Enterprise App",
+          price: "$3990",
+          period: "/project",
+          description: "Scalable mobile platform for advanced product needs.",
+          features: [
+            "Scalable app architecture",
+            "Role-based access",
+            "Advanced security setup",
+            "Admin dashboard integrations",
+            "Post-launch maintenance plan",
+          ],
+          cta: "Request Custom Quote",
+        },
+      ],
+    },
+  },
   projects: {
     label: "Projects",
     title: "Things I've Built & Made",
     highlightWord: "Made",
-    description: "A mix of client work and personal projects. Carefully crafted and designed to provide the best user experience.",
+    description:
+      "A mix of client work and personal projects. Carefully crafted and designed to provide the best user experience.",
     filters: [
       { label: "All Projects", value: "all" },
       { label: "Dashboards", value: "Dashboards" },
@@ -342,16 +547,19 @@ const en: typeof ar = {
     items: [
       {
         title: "Mernify",
-        description: "A Real time chat application built with the MERN stack (MongoDB, Express.js, React, Node.js). It features user authentication, real-time messaging, and a responsive design. Users can create accounts, join chat rooms, and send messages instantly.",
+        description:
+          "A Real time chat application built with the MERN stack (MongoDB, Express.js, React, Node.js). It features user authentication, real-time messaging, and a responsive design. Users can create accounts, join chat rooms, and send messages instantly.",
       },
       {
         title: "Anone",
-        description: "An e-commerce platform built with React and Firebase, featuring product filtering, shopping cart functionality, and secure payment processing. Includes admin dashboard for inventory management.",
+        description:
+          "An e-commerce platform built with React and Firebase, featuring product filtering, shopping cart functionality, and secure payment processing. Includes admin dashboard for inventory management.",
       },
       {
         title: "FoodieLand",
-        description: "A modern landing page template for financial services, featuring responsive design, animated statistics, and interactive UI elements. Built with HTML, CSS, and JavaScript.",
-      }
+        description:
+          "A modern landing page template for financial services, featuring responsive design, animated statistics, and interactive UI elements. Built with HTML, CSS, and JavaScript.",
+      },
     ],
   },
   testimonials: {
@@ -367,11 +575,9 @@ const en: typeof ar = {
       {
         name: "creative2tg",
         country: "Canada",
-        text: "We had a specific coding requirement and he understood it immediately and put it together exactly as we’d hoped. Incredible value for the work he did and fantastic communication. Working with him was a 10/10 - we’ll definitely be using him again!"
-
-,
+        text: "We had a specific coding requirement and he understood it immediately and put it together exactly as we’d hoped. Incredible value for the work he did and fantastic communication. Working with him was a 10/10 - we’ll definitely be using him again!",
       },
-    
+
       {
         name: "Hassan",
         country: "Saudi Arabia",
